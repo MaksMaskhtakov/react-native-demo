@@ -1,22 +1,29 @@
-import React, { useState } from 'react'
-import {View, StyleSheet, Text} from 'react-native'
+import React from "react";
+import {Text,View, StyleSheet, TouchableOpacity, Touchable } from "react-native";
 
-export const Todo = ({ todo }) => {
+export const Todo = ({ todo, onRemove, onOpen }) => {
     return (
-        <View style={styles.todo}>
+        <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={() => onOpen(todo.id)}
+            onLongPress={onRemove.bind(null, todo.id)}
+        >
+          <View style={styles.todo}>
             <Text>{todo.title}</Text>
-        </View>
-    )
-}
+          </View>
+         
+        </TouchableOpacity>
+    );
+};
 
 const styles = StyleSheet.create({
     todo: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        padding: 15,
-        borderWidth: 1,
-        borderColor: '#eee',
+        flexDirection: "row",
+        alignItems: "center",
+        padding: 10,
+        borderWidth: 2,
+        borderColor: "#FFD700",
         borderRadius: 5,
-        marginBottom: 10
+        marginBottom: 15
     }
 });

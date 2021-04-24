@@ -1,10 +1,10 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React from 'react';
+import {View, Text, StyleSheet} from 'react-native';
 
 export const NavBar = ({title}) => {
     return (
         <View style={styles.navbar}>
-            <Text style={styles.Text}>{title}</Text>
+           <Text style = {styles.text}>{title}</Text>
         </View>
     )
 };
@@ -17,8 +17,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#000',
         paddingBottom: 10
     },
-    Text: {
+    text: {
         color: '#FFD700',
-        fontSize: 20
+        fontSize: 25
     }
-})
+});
