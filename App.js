@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
-import { NavBar } from './src/NavBar';
-import { AddTodo } from './src/AddTodo';
-import { Todo } from './src/Todo';
+import { NavBar } from './src/components/NavBar';
+import { AddTodo } from './src/components/AddTodo';
+import { Todo } from './src/components/Todo';
 
 export default function App() {
   const [todos, setTodos] = useState([]);
