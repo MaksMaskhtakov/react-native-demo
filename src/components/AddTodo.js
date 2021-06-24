@@ -9,7 +9,7 @@ export const AddTodo = ({ onSubmit }) => {
             onSubmit(value);
             setValue("");
         }   else {
-            Alert.alert('укажите название');
+            Alert.alert('Give name');
         }
     };
 
@@ -19,9 +19,9 @@ export const AddTodo = ({ onSubmit }) => {
              style={styles.input} 
              onChangeText={setValue}
              value={value}
-             placeholder="..."
+             placeholder="Text"
              />
-            <Button title="Добавить" onPress= {pressHandler} color='#000' />
+            <Button title="     ADD     " onPress= {pressHandler} color='#000' />
         </View>
     );
 };
@@ -31,14 +31,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent:'space-between',
         alignItems: 'center',
-        marginBottom: 15
+        marginBottom: 30
     },
     input: {
-        width: '70%',
-        padding: 10,
+        width: '80%',
+        padding: 8,
         borderStyle: 'solid',
-        borderBottomWidth: 2,
-        borderBottomColor: '#FFD700',
+        borderBottomWidth: 1,
+        borderBottomColor: '#',
 
     }
 

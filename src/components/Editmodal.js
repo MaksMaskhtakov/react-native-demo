@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { StyleSheet, View, TextInput, Button, Modal, Alert} from "react-native";
 
-export const EditModal = ({ Visible, onCancel, Value, onSave}) => {
+export const EditModal = ({ onCancel, onSave}) => {
     const [title, setTitle] = useState(value);
     const saveHandler = () => {
         if (title.trim().length < 3) {
-            Alert.alert("Ошибка!",`Сейчас длинна составляет ${title.trim().length}`)
+            Alert.alert("ERR!",`длинна составляет ${title.trim().length}`)
         } else {
             onSave(title);
         }
@@ -17,12 +17,12 @@ export const EditModal = ({ Visible, onCancel, Value, onSave}) => {
                 value={title} 
                 onChangeText={setTitle} 
                 style={styles.input} 
-                placeholder="Введите название" 
+                placeholder="enter name" 
                 maxLength={64}
                 />
                 <View style={styles.buttons}>
-                   <Button title="Отменить" color="#000" onPress={onCancel} />
-                   <Button title="Сохранить" onPress={saveHandler} />
+                   <Button title="Canel" color="#000" onPress={onCancel} />
+                   <Button title="Save" onPress={saveHandler} />
                 </View>
             </View>
         </Modal>
